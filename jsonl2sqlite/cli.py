@@ -26,6 +26,8 @@ def main(
 
     from pypika import Column, Query
 
+    sqlite.parent.mkdir(parents=True, exist_ok=True)
+
     db = sqlite3.connect(sqlite)
     cursor = db.cursor()
 
